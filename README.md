@@ -37,7 +37,7 @@ chatbot/
 
 # Chatbot Demo
 
-![Chatbot Demo](Screen Recording 2025-08-21 085944.mp4)
+[[![Watch Demo]](Screen Recording 2025-08-21 085944.mp4)
 
 
 

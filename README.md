@@ -35,6 +35,9 @@ chatbot/
 
 │── README.md
 
+# Chatbot Demo
+
+![Chatbot Demo](demo.gif)
 
 
 

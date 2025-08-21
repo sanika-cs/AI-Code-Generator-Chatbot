@@ -37,7 +37,7 @@ chatbot/
 
 # Chatbot Demo
 
-[[![Watch Demo]](Screen Recording 2025-08-21 085944.mp4)
+[[![Watch Demo]](https://github.com/sanika-cs/AI-Code-Generator-Chatbot/blob/main/Screen%20Recording%202025-08-21%20085944.mp4)
 
 
 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Creation Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        textarea { width: 100%; height: 150px; margin-bottom: 10px; }
+        pre { background: #f5f5f5; padding: 10px; border-radius: 5px; white-space: pre-wrap; }
+        button { padding: 8px 16px; margin-top: 5px; }
+        .section { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h2> AI Code Creation Chatbot</h2>
+
+    <!-- Form to generate code -->
+    <form method="POST">
+        <textarea name="task" placeholder="Describe your coding task here..." required>{{ task or '' }}</textarea>
+        <button type="submit" name="action" value="generate_code">Generate Code</button>
+    </form>
+
+    {% if code %}
+    <div class="section">
+        <h3> Generated Code:</h3>
+        <pre>{{ code }}</pre>
+
+        <!-- Form to explain code -->
+        <form method="POST">
+            <input type="hidden" name="task" value="{{ task }}">
+            <input type="hidden" name="existing_code" value="{{ code }}">
+            <button type="submit" name="action" value="explain_code">Explain Code</button>
+        </form>
+    </div>
+    {% endif %}
+
+    {% if explanation %}
+    <div class="section">
+          <h3> Explanation:</h3>
+          <div>{{ explanation|safe }}</div>
+    </div>
+
+    {% endif %}
+
+    {% if error %}
+    <div class="section">
+        <h3 style="color:red;">❌ Error: {{ error }}</h3>
+    </div>
+    {% endif %}
+</body>
+</html>
+
